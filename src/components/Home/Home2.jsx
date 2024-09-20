@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/074A7445.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -8,23 +8,26 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import WaveParticlesScene from "../Particules/wave-particules";
 
 function Home2() {
   return (
+   
     <Container fluid className="home-about-section" id="about">
+      
       <Container>
+        
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              Ayant commencé par la programmation , j'ai petit à petit commencer a découvrir le réseau et le système
               <br />
-              <br />I am fluent in classics like
+              <br />I
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> C++ </b>
               </i>
               <br />
               <br />

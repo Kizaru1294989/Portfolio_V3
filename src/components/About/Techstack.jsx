@@ -9,7 +9,9 @@ import {
   DiPython,
   DiGit,
   DiJava,
+  
 } from "react-icons/di";
+import { VscTerminalBash } from "react-icons/vsc";
 import {
   SiRedis,
   SiFirebase,
@@ -18,6 +20,8 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
+import { FaPhp } from "react-icons/fa6";
+
 
 function Techstack() {
   return (
@@ -47,13 +51,7 @@ function Techstack() {
         <SiNextdotjs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPostgresql />
@@ -63,6 +61,12 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJava />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <VscTerminalBash />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <FaPhp />
       </Col>
     </Row>
   );
