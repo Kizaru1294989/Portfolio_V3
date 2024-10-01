@@ -6,12 +6,15 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import WaveParticlesScene from "../Particules/wave-particules";
 import { Cube } from "../Geometry/Cube";
+import TerrainViewer from "../Geometry/three_animation/Montain";
+
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
         {/* <Particle /> */}
+ 
         <WaveParticlesScene/>
         <Container className="home-content">
           <Row>
@@ -27,6 +30,7 @@ function Home() {
                 Je suis
                 <strong className="main-name"> Ryan Rais</strong>
               </h1>
+              {/* <TerrainViewer/> */}
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />

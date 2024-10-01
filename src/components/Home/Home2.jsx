@@ -9,7 +9,8 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import WaveParticlesScene from "../Particules/wave-particules";
-
+import Shader from "../Geometry/shader";
+import ParticlesBillboards from "../Geometry/Circle";
 function Home2() {
   return (
    
@@ -18,6 +19,7 @@ function Home2() {
       <Container>
         
         <Row>
+          {/* <Shader/> */}
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
@@ -100,7 +102,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/soumyajit4419"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"

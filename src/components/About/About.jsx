@@ -9,6 +9,7 @@ import Toolstack from "./Toolstack";
 import NetworkStack from "./NetworkStack";
 import LinuxStack from "./LinuxStack";
 import AutomatisationStack from "./AutomatisationStack";
+import TerrainViewer from "../Geometry/three_animation/Montain";
 
 function About() {
   return (
@@ -76,7 +77,9 @@ function About() {
 
         <Github />
       </Container>
+      {/* <TerrainViewer/> */}
     </Container>
+   
   );
 }
 
