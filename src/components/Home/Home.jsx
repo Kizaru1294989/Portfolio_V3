@@ -7,15 +7,15 @@ import Type from "./Type";
 import WaveParticlesScene from "../Particules/wave-particules";
 import { Cube } from "../Geometry/Cube";
 import TerrainViewer from "../Geometry/three_animation/Montain";
-
+import RainEffect from "../Geometry/Cloud/Cloud";
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        {/* <Particle /> */}
+        <Particle />
  
-        <WaveParticlesScene/>
+        {/* <RainEffect/> */}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
