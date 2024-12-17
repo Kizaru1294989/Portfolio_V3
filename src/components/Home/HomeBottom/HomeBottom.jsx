@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/074A7445.jpg";
+import myImg from "../../../Assets/074A7445.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -8,10 +8,10 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import WaveParticlesScene from "../Particules/wave-particules";
-import Shader from "../Geometry/shader";
-import ParticlesBillboards from "../Geometry/Circle";
-function Home2() {
+import WaveParticlesScene from "../../Geometry/Particules/wave-particules";
+import Shader from "../../Geometry/shader";
+import ParticlesBillboards from "../../Geometry/Circle";
+function HomeBottom() {
   return (
    
     <Container fluid className="home-about-section" id="about">
@@ -117,4 +117,4 @@ function Home2() {
     </Container>
   );
 }
-export default Home2;
+export default HomeBottom;

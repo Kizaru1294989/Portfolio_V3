@@ -131,6 +131,14 @@ export default function RainEffect() {
     }
   }, [])
 
-  return <div ref={containerRef} style={{ width: '100vw', height: '100vh' }} />
+  return <div ref={containerRef}       style={{
+    position: 'absolute',  
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100vh',
+    zIndex: -1,  
+    pointerEvents: 'none',  
+  }} />
 }
 
