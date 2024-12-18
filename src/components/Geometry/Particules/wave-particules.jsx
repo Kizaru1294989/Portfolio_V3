@@ -91,7 +91,7 @@ const WaveParticlesScene = () => {
         top: 0,
         left: 0,
         width: '100%',
-        height: '100vh',
+        height: '180vh',
         zIndex: -1,  // z-index set to -1 to place behind other components
         pointerEvents: 'none',  // Ensure it doesn't block interaction with other elements
       }}

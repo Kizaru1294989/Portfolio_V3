@@ -28,16 +28,16 @@ export default function RainEffect() {
     containerRef.current?.appendChild(renderer.domElement)
 
     // Lights
-    const ambient = new THREE.AmbientLight(0x555555)
+    const ambient = new THREE.AmbientLight(0xaaaaaa)
     scene.add(ambient)
 
-    const directionalLight = new THREE.DirectionalLight(0xffeedd)
+    const directionalLight = new THREE.DirectionalLight(0xaaaaaa)
     directionalLight.position.set(0, 0, 1)
     scene.add(directionalLight)
 
     // Rain
     const rainGeometry = new THREE.BufferGeometry()
-    const rainCount = 15000
+    const rainCount = 1200
 
     const positions = new Float32Array(rainCount * 3)
     const velocities = new Float32Array(rainCount)
@@ -54,7 +54,7 @@ export default function RainEffect() {
 
     const rainMaterial = new THREE.PointsMaterial({
       color: 0xaaaaaa,
-      size: 0.1,
+      size: 0.3,
       transparent: true
     })
 
@@ -66,7 +66,7 @@ export default function RainEffect() {
     const loader = new THREE.TextureLoader()
 
     loader.load("https://raw.githubusercontent.com/navin-navi/codepen-assets/master/images/smoke.png", (texture) => {
-      const cloudGeometry = new THREE.PlaneGeometry(500, 500)
+      const cloudGeometry = new THREE.PlaneGeometry(600, 600)
       const cloudMaterial = new THREE.MeshLambertMaterial({
         map: texture,
         transparent: true
@@ -135,8 +135,6 @@ export default function RainEffect() {
     position: 'absolute',  
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100vh',
     zIndex: -1,  
     pointerEvents: 'none',  
   }} />

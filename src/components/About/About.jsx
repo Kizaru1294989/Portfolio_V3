@@ -10,20 +10,13 @@ import NetworkStack from "./NetworkStack";
 import LinuxStack from "./LinuxStack";
 import AutomatisationStack from "./AutomatisationStack";
 import TerrainViewer from "../Geometry/three_animation/Montain";
+import RainEffect from "../Geometry/Cloud/Cloud";
 
 function About() {
   return (
     <Container fluid className="about-section">
-      {/* <Particle /> */}
-                 <span className="tags bottom-tags">
-           <div id="stars"></div>
-           <div id="stars2"></div>
-           <div id="stars3"></div>
-           <div id="rocket"></div>
-           <div id="rocket2"></div>
-           <div id="rocket3"></div>
-         
-        </span>
+       
+       <RainEffect/>  
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
