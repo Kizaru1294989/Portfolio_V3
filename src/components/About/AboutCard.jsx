@@ -11,9 +11,9 @@ function AboutCard() {
             Bonjour , Je suis <span className="purple">Ryan Rais </span>
             et je viens de <span className="purple"> Paris en France.</span>
             <br />
-            Je suis actuellement employé en tant qu'apprentis NetDevops sécurité chez Exaprobe
+            Je suis actuellement employé en tant qu'apprentis NetDevops sécurité
+            chez Exaprobe
             <br />
-       
             <br />
             <br />
             Mettons de coté l'informatique je suis également passionné par
@@ -34,7 +34,8 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Je ne pense pas qu'il y ait de bonne ou de mauvaises situations ..."{" "}
+            "Je ne pense pas qu'il y ait de bonne ou de mauvaises situations
+            ..."{" "}
           </p>
           <footer className="blockquote-footer">Ryan Chergui</footer>
         </blockquote>

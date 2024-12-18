@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import Stats from 'three/addons/libs/stats.module.js';
-import * as BufferGeometryUtils from 'three/addons/utils/BufferGeometryUtils.js';
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
+import Stats from "three/addons/libs/stats.module.js";
+import * as BufferGeometryUtils from "three/addons/utils/BufferGeometryUtils.js";
 
 const ParticlesBillboards = () => {
   const containerRef = useRef(null);
@@ -20,35 +20,51 @@ const ParticlesBillboards = () => {
     // Initialize Scene
     scene = new THREE.Scene();
 
-    const radius = 100, segments = 68, rings = 38;
+    const radius = 100,
+      segments = 68,
+      rings = 38;
 
     // Geometry setup
     let sphereGeometry = new THREE.SphereGeometry(radius, segments, rings);
-    let boxGeometry = new THREE.BoxGeometry(0.8 * radius, 0.8 * radius, 0.8 * radius, 10, 10, 10);
+    let boxGeometry = new THREE.BoxGeometry(
+      0.8 * radius,
+      0.8 * radius,
+      0.8 * radius,
+      10,
+      10,
+      10,
+    );
 
-    sphereGeometry.deleteAttribute('normal');
-    sphereGeometry.deleteAttribute('uv');
-    boxGeometry.deleteAttribute('normal');
-    boxGeometry.deleteAttribute('uv');
+    sphereGeometry.deleteAttribute("normal");
+    sphereGeometry.deleteAttribute("uv");
+    boxGeometry.deleteAttribute("normal");
+    boxGeometry.deleteAttribute("uv");
 
     sphereGeometry = BufferGeometryUtils.mergeVertices(sphereGeometry);
     boxGeometry = BufferGeometryUtils.mergeVertices(boxGeometry);
 
-    const combinedGeometry = BufferGeometryUtils.mergeGeometries([sphereGeometry, boxGeometry]);
-    const positionAttribute = combinedGeometry.getAttribute('position');
+    const combinedGeometry = BufferGeometryUtils.mergeGeometries([
+      sphereGeometry,
+      boxGeometry,
+    ]);
+    const positionAttribute = combinedGeometry.getAttribute("position");
 
     const colors = [];
     const sizes = [];
     const color = new THREE.Color();
     const vertex = new THREE.Vector3();
-    const length1 = sphereGeometry.getAttribute('position').count;
+    const length1 = sphereGeometry.getAttribute("position").count;
     length1Ref.current = length1;
 
     for (let i = 0, l = positionAttribute.count; i < l; i++) {
       vertex.fromBufferAttribute(positionAttribute, i);
 
       if (i < length1) {
-        color.setHSL(0.01 + 0.1 * (i / length1), 0.99, (vertex.y + radius) / (4 * radius));
+        color.setHSL(
+          0.01 + 0.1 * (i / length1),
+          0.99,
+          (vertex.y + radius) / (4 * radius),
+        );
       } else {
         color.setHSL(0.6, 0.75, 0.25 + vertex.y / (2 * radius));
       }
@@ -59,12 +75,12 @@ const ParticlesBillboards = () => {
 
     // Create Buffer Geometry for Points
     const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute('position', positionAttribute);
-    geometry.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
-    geometry.setAttribute('ca', new THREE.Float32BufferAttribute(colors, 3));
+    geometry.setAttribute("position", positionAttribute);
+    geometry.setAttribute("size", new THREE.Float32BufferAttribute(sizes, 1));
+    geometry.setAttribute("ca", new THREE.Float32BufferAttribute(colors, 3));
 
     // Load texture
-    const texture = new THREE.TextureLoader().load('textures/sprites/disc.png');
+    const texture = new THREE.TextureLoader().load("textures/sprites/disc.png");
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
 
@@ -72,7 +88,7 @@ const ParticlesBillboards = () => {
     const material = new THREE.ShaderMaterial({
       uniforms: {
         color: { value: new THREE.Color(0xffffff) },
-        pointTexture: { value: texture }
+        pointTexture: { value: texture },
       },
       vertexShader: `
         attribute float size;
@@ -94,7 +110,7 @@ const ParticlesBillboards = () => {
           gl_FragColor = color;
         }
       `,
-      transparent: true
+      transparent: true,
     });
 
     // Add Points to the Scene
@@ -117,7 +133,7 @@ const ParticlesBillboards = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', onWindowResize);
+    window.addEventListener("resize", onWindowResize);
 
     // Animation Loop
     const animate = () => {
@@ -144,12 +160,15 @@ const ParticlesBillboards = () => {
     const sortPoints = () => {
       const vector = new THREE.Vector3();
       const matrix = new THREE.Matrix4();
-      matrix.multiplyMatrices(camera.projectionMatrix, camera.matrixWorldInverse);
+      matrix.multiplyMatrices(
+        camera.projectionMatrix,
+        camera.matrixWorldInverse,
+      );
       matrix.multiply(sphere.matrixWorld);
 
       const geometry = sphere.geometry;
       let index = geometry.getIndex();
-      const positions = geometry.getAttribute('position').array;
+      const positions = geometry.getAttribute("position").array;
       const length = positions.length / 3;
 
       if (index === null) {
@@ -182,12 +201,12 @@ const ParticlesBillboards = () => {
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener("resize", onWindowResize);
       container.removeChild(renderer.domElement);
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100vh' }} />;
+  return <div ref={containerRef} style={{ width: "100%", height: "100vh" }} />;
 };
 
 export default ParticlesBillboards;

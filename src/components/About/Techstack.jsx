@@ -9,7 +9,6 @@ import {
   DiPython,
   DiGit,
   DiJava,
-  
 } from "react-icons/di";
 import { VscTerminalBash } from "react-icons/vsc";
 import {
@@ -21,7 +20,6 @@ import {
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 import { FaPhp } from "react-icons/fa6";
-
 
 function Techstack() {
   return (

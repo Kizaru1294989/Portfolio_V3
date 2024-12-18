@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import { SiNginx } from "react-icons/si";
 import { SiKalilinux } from "react-icons/si";
 import { SiApache } from "react-icons/si";
-import aircrack from "../../Assets/Icons/air.png"
+import aircrack from "../../Assets/Icons/air.png";
 import { SiAnsible } from "react-icons/si";
 import { SiTerraform } from "react-icons/si";
 import { SiKubernetes } from "react-icons/si";

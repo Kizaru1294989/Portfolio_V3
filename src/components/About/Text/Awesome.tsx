@@ -19,12 +19,12 @@ const WavyText: FC<Props> = ({
 
   const container: Variants = {
     hidden: {
-      opacity: 0
+      opacity: 0,
     },
     visible: (i: number = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: duration, delayChildren: i * delay }
-    })
+      transition: { staggerChildren: duration, delayChildren: i * delay },
+    }),
   };
 
   const child: Variants = {
@@ -34,8 +34,8 @@ const WavyText: FC<Props> = ({
       transition: {
         type: "spring",
         damping: 12,
-        stiffness: 200
-      }
+        stiffness: 200,
+      },
     },
     hidden: {
       opacity: 0,
@@ -43,9 +43,9 @@ const WavyText: FC<Props> = ({
       transition: {
         type: "spring",
         damping: 12,
-        stiffness: 200
-      }
-    }
+        stiffness: 200,
+      },
+    },
   };
 
   return (

@@ -11,22 +11,48 @@ export const Cube = () => {
     <div className="stage-cube-cont">
       <div className="cubespinner">
         <div className="face1">
-          <img src={linuxImage} alt="Linux" style={{ width: "125px", height: "125px" }} /> {/* Remplacement par une image PNG */}
+          <img
+            src={linuxImage}
+            alt="Linux"
+            style={{ width: "125px", height: "125px" }}
+          />{" "}
+          {/* Remplacement par une image PNG */}
         </div>
         <div className="face2">
-        <img src={cisco} alt="cisco" style={{ width: "205px", height: "100px" }} />{/* HTML5 icon */}
+          <img
+            src={cisco}
+            alt="cisco"
+            style={{ width: "205px", height: "100px" }}
+          />
+          {/* HTML5 icon */}
         </div>
         <div className="face3">
-        <img src={python} alt="Linux" style={{ width: "125px", height: "125px" }} />
+          <img
+            src={python}
+            alt="Linux"
+            style={{ width: "125px", height: "125px" }}
+          />
         </div>
         <div className="face4">
-        <img src={palo} alt="Linux" style={{ width: "205px", height: "125px" }} />
+          <img
+            src={palo}
+            alt="Linux"
+            style={{ width: "205px", height: "125px" }}
+          />
         </div>
         <div className="face5">
-        <img src={ansible} alt="Linux" style={{ width: "300px", height: "125px" }} />
+          <img
+            src={ansible}
+            alt="Linux"
+            style={{ width: "300px", height: "125px" }}
+          />
         </div>
         <div className="face6">
-        <img src={react} alt="Linux" style={{ width: "125px", height: "125px" }} />
+          <img
+            src={react}
+            alt="Linux"
+            style={{ width: "125px", height: "125px" }}
+          />
         </div>
       </div>
     </div>

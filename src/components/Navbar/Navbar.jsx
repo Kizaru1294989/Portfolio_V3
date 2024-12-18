@@ -92,7 +92,7 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> CV
               </Nav.Link>
             </Nav.Item>
-{/* 
+            {/* 
             <Nav.Item>
               <Nav.Link
                 href="https://soumyajitblogs.vercel.app/"
@@ -114,7 +114,7 @@ function NavBar() {
               </Button>
             </Nav.Item>
             <Nav.Item className="fork-btn">
-      <SoundBar/>
+              <SoundBar />
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

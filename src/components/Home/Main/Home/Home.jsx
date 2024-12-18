@@ -8,6 +8,7 @@ import { Cube } from "../../../Geometry/Cube";
 import TerrainViewer from "../../../Geometry/three_animation/Montain";
 import RainEffect from "../../../Geometry/Cloud/Cloud";
 import WavyText from "../../../About/Text/Awesome";
+import ParticleAnimation from "../../../Geometry/Particules/WaveTube";
 
 function Home() {
   const [replay, setReplay] = React.useState(true);
@@ -15,32 +16,34 @@ function Home() {
     <section>
       <Container fluid className="home-section" id="home">
         <Particle />
- 
-        <WaveParticlesScene/>
+        {/* <ParticleAnimation /> */}
+        <WaveParticlesScene />
         {/* <RainEffect/> */}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-              <WavyText text="Bonjour Bonsoir" replay={replay} />{" "}
+                <WavyText text="Bonjour Bonsoir" replay={replay} />{" "}
                 {/* <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span> */}
               </h1>
 
               <h1 className="heading-name">
-              <WavyText text="Je suis" replay={replay} />
-                <strong className="main-name"><WavyText text="Ryan Rais" replay={replay} /></strong>
+                <WavyText text="Je suis" replay={replay} />
+                <strong className="main-name">
+                  <WavyText text="Ryan Rais" replay={replay} />
+                </strong>
               </h1>
               {/* <TerrainViewer/> */}
-      
+
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 700 }}>
-             <Cube/>
+              <Cube />
             </Col>
           </Row>
         </Container>

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 const Shader = () => {
   const containerRef = useRef(null);
@@ -82,7 +82,7 @@ const Shader = () => {
     const onWindowResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
-    window.addEventListener('resize', onWindowResize);
+    window.addEventListener("resize", onWindowResize);
 
     // Start animation loop
     const animate = () => {
@@ -94,7 +94,7 @@ const Shader = () => {
 
     // Cleanup on unmount
     return () => {
-      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener("resize", onWindowResize);
       container.removeChild(renderer.domElement);
     };
   }, []);
@@ -103,13 +103,13 @@ const Shader = () => {
     <div
       ref={containerRef}
       style={{
-        position: 'absolute',  // Position absolute to overlay on the page
+        position: "absolute", // Position absolute to overlay on the page
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100vh',  // Full height of the viewport
-        zIndex: -1,  // z-index set to -1 to place behind other components
-        pointerEvents: 'none',  // Ensure it doesn't block interaction with other elements
+        width: "100%",
+        height: "100vh", // Full height of the viewport
+        zIndex: -1, // z-index set to -1 to place behind other components
+        pointerEvents: "none", // Ensure it doesn't block interaction with other elements
       }}
     />
   );

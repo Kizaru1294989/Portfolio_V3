@@ -15,8 +15,7 @@ import RainEffect from "../Geometry/Cloud/Cloud";
 function About() {
   return (
     <Container fluid className="about-section">
-       
-       <RainEffect/>  
+      <RainEffect />
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
@@ -42,10 +41,9 @@ function About() {
         </Row>
 
         <h1 className="project-heading">
-           <strong className="purple">Réseaux </strong>
+          <strong className="purple">Réseaux </strong>
         </h1>
         <NetworkStack />
-
 
         <h1 className="project-heading">
           <strong className="purple">Linux Blue/Red Team</strong>
@@ -53,26 +51,19 @@ function About() {
         <LinuxStack />
 
         <h1 className="project-heading">
-           <strong className="purple">Devops/Secops </strong>
+          <strong className="purple">Devops/Secops </strong>
         </h1>
         <AutomatisationStack />
 
-
         <h1 className="project-heading">
-           <strong className="purple">Devloppement </strong>
+          <strong className="purple">Devloppement </strong>
         </h1>
         <Techstack />
-
-
-   
-
-
 
         <Github />
       </Container>
       {/* <TerrainViewer/> */}
     </Container>
-   
   );
 }
 

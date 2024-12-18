@@ -13,11 +13,8 @@ import Shader from "../../Geometry/shader";
 import ParticlesBillboards from "../../Geometry/Circle";
 function HomeBottom() {
   return (
-   
     <Container fluid className="home-about-section" id="about">
-      
       <Container>
-        
         <Row>
           {/* <Shader/> */}
           <Col md={8} className="home-about-description">
@@ -25,7 +22,8 @@ function HomeBottom() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Ayant commencé par la programmation , j'ai petit à petit commencer a découvrir le réseau et le système
+              Ayant commencé par la programmation , j'ai petit à petit commencer
+              a découvrir le réseau et le système
               <br />
               <br />I
               <i>
@@ -36,10 +34,7 @@ function HomeBottom() {
               My field of Interest's are building new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain.
-                </b>
+                also in areas related to <b className="purple">Blockchain.</b>
               </i>
               <br />
               <br />
