@@ -1,15 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import "variable.scss";
 body {
   margin: 0;
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2b4162;
-  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
-
+  // background-color: #2b4162;
+  // background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  // background-color: #000000;
+  // background-image: linear-gradient(315deg, #000000 0%, #5e5368 74%);
+//   background-color: #4d4855;
+// background-image: linear-gradient(147deg, #000000 0%, #4d4855 74%);
+background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, $black 74%);
   /* background-color: #7f5a83;
 background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
 }
+
+
+//=== Drawing effect
+
+@mixin btn-border-drawing(
+  $color: #ccc,
+  $hover: black,
+  $width: 2px,
+  $vertical: top,
+  $horizontal: left,
+  $duration: 0.25s
+) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color 4 0/3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == "left", "right", "left");
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+    outline: none;
+  }
+
+  &::after {
+    $v-side: if($vertical == "top", "bottom", "top");
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition:
+        border-color 0s,
+        width $duration,
+        height $duration;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
+
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
+  }
+}
+
+.draw-border {
+  @include btn-border-drawing(#58afd1, white, 4px, bottom, right);
+}
+
+//=== Button styling, semi-ignore
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font:
+    700 1.2rem "Raleway", serif !important;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  width: 30%;
+  outline: none;
+}
+
 
 #particle-canvas {
   width: 100%;
@@ -263,13 +360,13 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: $blue;
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: $blue;
   border-radius: 12px;
 }
 
@@ -298,7 +395,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: $blue !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -395,7 +492,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: $blue;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -481,17 +578,17 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: $blue;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: $blue !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: $blue !important;
 }
 
 @media (max-width: 767px) {
@@ -571,7 +668,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #68187a;
+  background: $blue;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -579,13 +676,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px $blue;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: $blue;
+  box-shadow: 0 0 5px $blue;
+  text-shadow: 0 0 2px $blue;
 }
 
 .social-icons {
@@ -595,7 +692,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: $blue !important;
 }
 
 /* --------- */
@@ -639,7 +736,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: $blue !important;
 }
 /* --------- */
 /* Projects */
