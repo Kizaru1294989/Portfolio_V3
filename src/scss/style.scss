@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @import "variable.scss";
 body {
@@ -12,11 +14,27 @@ body {
 //   background-color: #4d4855;
 // background-image: linear-gradient(147deg, #000000 0%, #4d4855 74%);
 background-color: #2d3436;
-background-image: linear-gradient(315deg, #2d3436 0%, $black 74%);
+background-image: linear-gradient(315deg, $black 0%, $black 74%);
   /* background-color: #7f5a83;
 background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
 }
 
+/* App.scss */
+.App {
+  font-family: Arial, sans-serif;
+}
+
+#no-scroll {
+  overflow: hidden;
+}
+
+.transition-mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 2rem;
+}
 
 //=== Drawing effect
 

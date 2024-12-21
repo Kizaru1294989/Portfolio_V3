@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
 // Constants
-const NUM_PARTICLES = 600;
-const PARTICLE_SIZE = 0.5; // View heights
-const SPEED = 20000; // Milliseconds
+const NUM_PARTICLES = 1000;
+const PARTICLE_SIZE = 0.2; // View heights
+const SPEED = 10000; // Milliseconds
 
 function randomNormal({ mean = 0, dev = 1, pool = [] }) {
   function normalPool(o) {
@@ -36,10 +36,10 @@ function rand(low, high) {
 
 function createParticle() {
   const colour = {
-    r: 255,
-    g: randomNormal({ mean: 125, dev: 20 }),
-    b: 50,
-    a: rand(0, 1),
+    r: 255, 
+    g: 255,
+    b: 255,
+    a: rand(0.1, 0.9), 
   };
   return {
     x: -2,
