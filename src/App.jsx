@@ -12,98 +12,43 @@ import "./scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
 
-const LoaderCircle = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#000", // Couleur de fond du chargement
-      }}
-    >
-      <motion.div
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          repeat: Infinity,
-          duration: 1,
-          ease: "linear",
-        }}
-        style={{
-          width: "50px",
-          height: "50px",
-          border: "5px solid white",
-          borderTopColor: "transparent",
-          borderRadius: "50%",
-        }}
-      />
-    </div>
-  );
-};
-
 function App() {
   const [load, setLoad] = useState(true);
-  const [showLoader, setShowLoader] = useState(false); // Nouvel état pour le loader circulaire
 
   useEffect(() => {
-    // Premier timer : affiche le loader après 5 secondes
-    const previewTimer = setTimeout(() => {
-      setShowLoader(true); // Affiche le LoaderCircle
-    }, 5000); // Temps d'affichage du Preview (ajustable)
-
-    // Deuxième timer : après le loader, affiche l'application
-    const appTimer = setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoad(false);
-    }, 10000); // Total : 5 secondes de Preview + 5 secondes de LoaderCircle
-
-    return () => {
-      clearTimeout(previewTimer);
-      clearTimeout(appTimer);
-    };
+    }, 2000); // Transition après 5 secondes
+    return () => clearTimeout(timer);
   }, []);
 
   // Animation des transitions
   const transitionVariants = {
-    initial: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } },
-    enter: { opacity: 0 },
+    initial: { opacity: 1, scale: 1 }, // État initial
+    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }, // Animation de sortie
+    enter: { opacity: 0 }, // (facultatif) Effet avant la sortie
   };
 
   return (
     <>
       <AnimatePresence mode="wait">
         {load ? (
-          showLoader ? (
-            <motion.div
-              key="loaderCircle"
-              initial="initial"
-              animate="initial"
-              exit="exit"
-              variants={transitionVariants}
-            >
-              <LoaderCircle />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="preview"
-              initial="initial"
-              animate="initial"
-              exit="exit"
-              variants={transitionVariants}
-            >
-              <Preview />
-            </motion.div>
-          )
+          <motion.div
+            key="preview"
+            initial="initial"
+            animate="initial"
+            exit="exit"
+            variants={transitionVariants}
+          >
+            <Preview />
+          </motion.div>
         ) : (
           <motion.div
             key="app"
             initial="enter"
             animate="initial"
             variants={transitionVariants}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0}} // Effet de sortie si nécessaire
           >
             <Router>
               <div className="App">
