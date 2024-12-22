@@ -11,11 +11,19 @@ import { FaLinkedinIn } from "react-icons/fa";
 import WaveParticlesScene from "../../Geometry/Particules/wave-particules";
 import Shader from "../../Geometry/shader";
 import ParticlesBillboards from "../../Geometry/Circle";
+
 function HomeBottom() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
+        <Row
+          style={{
+            display: "flex",
+            backgroundColor: "#101010",
+            padding: "50px",
+            borderRadius: "30px",
+          }}
+        >
           {/* <Shader/> */}
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>

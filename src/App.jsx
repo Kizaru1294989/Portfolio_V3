@@ -6,7 +6,12 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,7 +23,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad(false);
-    }, 2000); // Transition après 5 secondes
+    }, 1000); // Transition après 5 secondes
     return () => clearTimeout(timer);
   }, []);
 
@@ -48,7 +53,7 @@ function App() {
             initial="enter"
             animate="initial"
             variants={transitionVariants}
-            exit={{ opacity: 0}} // Effet de sortie si nécessaire
+            exit={{ opacity: 0 }} // Effet de sortie si nécessaire
           >
             <Router>
               <div className="App">

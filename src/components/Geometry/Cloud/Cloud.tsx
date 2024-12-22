@@ -138,7 +138,6 @@ export default function RainEffect() {
 
     render();
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", onWindowResize);
       containerRef.current?.removeChild(renderer.domElement);
@@ -149,11 +148,12 @@ export default function RainEffect() {
     <div
       ref={containerRef}
       style={{
-        position: "absolute",
+        position: "fixed",
         top: 0,
         left: 0,
+        width: "100vw",
+        height: "100vh",
         zIndex: -1,
-        pointerEvents: "none",
       }}
     />
   );

@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-export const ButtonHome = ({Icon , Text}) => {
+export const ButtonHome = ({ Icon, Text }) => {
   return (
     <Button
       sx={{

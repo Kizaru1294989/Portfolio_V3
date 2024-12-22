@@ -31,6 +31,11 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+  const iconstyle = {
+    marginBottom: "2px",
+    color: "#6cb4ee",
+  };
+
   return (
     <Navbar
       expanded={expand}
@@ -56,7 +61,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={iconstyle} /> Home
               </Nav.Link>
             </Nav.Item>
 
@@ -66,7 +71,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> A propos
+                <AiOutlineUser style={iconstyle} /> A propos
               </Nav.Link>
             </Nav.Item>
 
@@ -76,10 +81,7 @@ function NavBar() {
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <AiOutlineFundProjectionScreen style={iconstyle} /> Projects
               </Nav.Link>
             </Nav.Item>
 
@@ -89,30 +91,10 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> CV
+                <CgFileDocument style={iconstyle} /> CV
               </Nav.Link>
             </Nav.Item>
-            {/* 
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item> */}
 
-            <Nav.Item className="fork-btn">
-                {/* <Button
-                  href="https://github.com/soumyajit4419/Portfolio"
-                  target="_blank"
-                  className="fork-btn-inner"
-                >
-                  <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                  <AiFillStar style={{ fontSize: "1.1em" }} />
-                </Button> */}
-            </Nav.Item>
             <Nav.Item className="fork-btn">
               <SoundBar />
             </Nav.Item>

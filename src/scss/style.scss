@@ -1,5 +1,3 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 @import "variable.scss";
 body {
@@ -11,10 +9,10 @@ body {
   // background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
   // background-color: #000000;
   // background-image: linear-gradient(315deg, #000000 0%, #5e5368 74%);
-//   background-color: #4d4855;
-// background-image: linear-gradient(147deg, #000000 0%, #4d4855 74%);
-background-color: #2d3436;
-background-image: linear-gradient(315deg, $black 0%, $black 74%);
+  //   background-color: #4d4855;
+  // background-image: linear-gradient(147deg, #000000 0%, #4d4855 74%);
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, $black 0%, $black 74%);
   /* background-color: #7f5a83;
 background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
 }
@@ -118,13 +116,13 @@ background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%); */
   cursor: pointer;
   line-height: 1.5;
   font:
-    700 1.2rem "Raleway", serif !important;
+    700 1.2rem "Raleway",
+    serif !important;
   padding: 1em 2em;
   letter-spacing: 0.05rem;
   width: 30%;
   outline: none;
 }
-
 
 #particle-canvas {
   width: 100%;
@@ -717,7 +715,7 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: $grey;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -870,12 +868,12 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1.7px solid $blue !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  box-shadow: 1px 1px 1px 1px $blue !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -889,7 +887,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid $dark-blue !important;
 }
 .tech-icon-images {
   padding: 20px !important;

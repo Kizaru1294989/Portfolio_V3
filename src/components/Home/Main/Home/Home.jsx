@@ -10,7 +10,8 @@ import RainEffect from "../../../Geometry/Cloud/Cloud";
 import WavyText from "../../../About/Text/Awesome";
 import ParticleAnimation from "../../../Geometry/Particules/WaveTube";
 import { ButtonHome } from "../../../Button/ButtonHome";
-import TelegramIcon from '@mui/icons-material/Telegram';
+import { motion, AnimatePresence } from "framer-motion";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 function Home() {
   const [replay, setReplay] = React.useState(true);
@@ -26,7 +27,6 @@ function Home() {
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 <WavyText text="Bonjour Bonsoir Je suis" replay={replay} />{" "}
-               
               </h1>
 
               <h1 className="heading-name">
@@ -40,12 +40,10 @@ function Home() {
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
-              <div style={{ display : 'flex' , justifyContent : 'space-between'}}>
-              <ButtonHome Text={"Contact"} Icon={<TelegramIcon />}/>
-              <ButtonHome Text={"à propos"} Icon={<TelegramIcon />}/>
-
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <ButtonHome Text={"Contact"} Icon={<TelegramIcon />} />
+                <ButtonHome Text={"à propos"} Icon={<TelegramIcon />} />
               </div>
-
             </Col>
 
             <Col md={5} style={{ paddingBottom: 700 }}>

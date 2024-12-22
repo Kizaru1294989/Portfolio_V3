@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
-// import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import music from "../../Assets/sounds/Secunda.mp3";
 
 const Box = styled.div`
@@ -64,7 +64,6 @@ const play = keyframes`
 const Line = styled.span`
   background: #00ff7f;
   border: 1px solid;
-
   animation: ${play} 1s ease infinite;
   animation-play-state: ${(props) => (props.click ? "running" : "paused")};
   height: 1rem;
@@ -85,7 +84,10 @@ const SoundBar = () => {
     }
   };
   return (
-    <Box onClick={() => handleClick()}>
+    <Box
+      style={{ display: "flex", color: "#6cb4ee" }}
+      onClick={() => handleClick()}
+    >
       {/* <MusicNote onClick={click}/> */}
       <Line click={click} />
       <Line click={click} />
