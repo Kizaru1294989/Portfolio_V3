@@ -26,7 +26,7 @@ const Preview = () => {
           height: "100vh",
           margin: 0,
           backgroundColor: "",
-          overflow: "hidden", // Assure également que ce div ne scrolle pas
+          overflow: "hidden", 
         }}
       >
         <ParticleAnimation />

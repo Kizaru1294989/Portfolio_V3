@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"; // Importer AnimatePres
 import NavBar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Main/Home/Home";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+// import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
@@ -16,6 +16,7 @@ import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -53,7 +54,7 @@ function App() {
             initial="enter"
             animate="initial"
             variants={transitionVariants}
-            exit={{ opacity: 0 }} // Effet de sortie si nécessaire
+            exit={{ opacity: 0 }} 
           >
             <Router>
               <div className="App">

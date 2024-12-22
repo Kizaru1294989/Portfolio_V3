@@ -37,11 +37,12 @@ function rand(low, high) {
 
 function createParticle() {
   const colour = {
-    r: 255,
-    g: 255,
-    b: 255,
-    a: rand(0.1, 0.9),
+    r: rand(173, 240), // Valeurs pour une nuance de bleu clair
+    g: rand(216, 255), // Vert clair pour donner un aspect "bleu ciel"
+    b: 255, // Maximum pour une intensité bleue
+    a: rand(0.1, 0.9), // Transparence aléatoire
   };
+  
   return {
     x: -2,
     y: -2,
