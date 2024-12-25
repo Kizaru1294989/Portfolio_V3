@@ -19,7 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
 import { lazy, Suspense } from 'react';
 import Projects from "./components/Projects/Projects";
-import ProjectSingle from "./components/Projects/ProjectSingle";
+import ProjectSingle from "./components/Projects/ProjectPage";
 
 // const Projects = lazy(() => import('./components/Projects/Projects'));
 // const ProjectSingle = lazy(() => import('./components/Projects/ProjectSingle'));
