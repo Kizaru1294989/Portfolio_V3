@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -14,10 +15,14 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import SoundBar from "../SoundBoard/SoundBoard";
-
+import useThemeSwitcher from './useThemeSwitcher';
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { CgFileDocument } from "react-icons/cg";
+import  FlagFr  from "../../Assets/Flag/png-transparent-flag-of-france-flag-of-france-french-seat-arona-fr-france-blue-angle-flag-thumbnail.png"
+import  FlagEn  from "../../Assets/Flag/png-clipart-european-union-flag-of-the-united-kingdom-british-flag-logo.png"
 
 function NavBar() {
+  const [activeTheme, setTheme] = useThemeSwitcher();
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -78,7 +83,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/project"
+                to="/projects"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen style={iconstyle} /> Projects
@@ -94,6 +99,43 @@ function NavBar() {
                 <CgFileDocument style={iconstyle} /> CV
               </Nav.Link>
             </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={iconstyle} /> Expérience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={iconstyle} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+
+            <div
+						onClick={() => setTheme(activeTheme)}
+						aria-label="Theme Switcher"
+						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+					>
+						{activeTheme === 'dark' ? (
+              <>
+              <span class="fi fi-fr"></span>
+              </>
+						) : (
+              <>
+              <span class="fi fi-gb"></span> 
+              </>
+						)}
+					</div>
 
             <Nav.Item className="fork-btn">
               <SoundBar />

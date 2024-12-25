@@ -1,0 +1,123 @@
+/* General Styles */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .flex-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .padding-x {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .padding-y {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  .padding {
+    padding: 16px;
+  }
+  
+  /* Typography */
+  .hero-head-text {
+    font-weight: 900;
+    color: #1f1f1f;
+    font-size: 80px;
+    line-height: 90px;
+    margin-top: 8px;
+  }
+  
+  .hero-sub-text {
+    font-weight: 500;
+    color: #1f1f1f;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .section-head-text {
+    font-weight: 900;
+    color: white;
+    font-size: 60px;
+  }
+  
+  .section-sub-text {
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Card Styles */
+  .card-gradient {
+    background: linear-gradient(135deg, #333333, #66666e);
+    padding: 1px;
+    border-radius: 20px;
+    box-shadow: 0px 35px 120px -15px #1f1f1f;
+  }
+  
+  .card-content {
+    background: #333333;
+    border-radius: 20px;
+    padding: 20px 48px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-content img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+  
+  .card-content h3 {
+    margin-top: 10px;
+    color: #9999a1;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Spacing */
+  .mt-20 {
+    margin-top: 80px;
+  }
+  
+  .mt-4 {
+    margin-top: 16px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .hero-head-text {
+      font-size: 60px;
+    }
+    .hero-sub-text {
+      font-size: 26px;
+    }
+    .section-head-text {
+      font-size: 48px;
+    }
+  }
+  

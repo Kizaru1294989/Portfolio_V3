@@ -14,9 +14,15 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
+// import "./scss/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
+import { lazy, Suspense } from 'react';
 import Projects from "./components/Projects/Projects";
+import ProjectSingle from "./components/Projects/ProjectSingle";
+
+// const Projects = lazy(() => import('./components/Projects/Projects'));
+// const ProjectSingle = lazy(() => import('./components/Projects/ProjectSingle'));
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -60,13 +66,19 @@ function App() {
               <div className="App">
                 <NavBar />
                 <ScrollToTop />
+              
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/project" element={<Projects />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route
+                    path="/projects/single-project"
+                    element={<ProjectSingle />}
+                  />
                   <Route path="/about" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
+          
                 <Footer />
               </div>
             </Router>
