@@ -21,7 +21,7 @@ function HomeBottom() {
           style={{
             display: "flex",
             backgroundColor: "#101010",
-            padding: "50px",
+            padding: "100px",
             borderRadius: "30px",
           }}
         >

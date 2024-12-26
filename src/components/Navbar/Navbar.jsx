@@ -14,8 +14,10 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
+import { MdOutlineWork } from "react-icons/md";
 import SoundBar from "../SoundBoard/SoundBoard";
 import useThemeSwitcher from './useThemeSwitcher';
+import { IoIosMailUnread } from "react-icons/io";
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { CgFileDocument } from "react-icons/cg";
 import  FlagFr  from "../../Assets/Flag/png-transparent-flag-of-france-flag-of-france-french-seat-arona-fr-france-blue-angle-flag-thumbnail.png"
@@ -106,7 +108,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={iconstyle} /> Expérience
+                <MdOutlineWork style={iconstyle} /> Expérience
               </Nav.Link>
             </Nav.Item>
 
@@ -116,7 +118,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={iconstyle} /> Contact
+                <IoIosMailUnread  style={iconstyle} /> Contact
               </Nav.Link>
             </Nav.Item>
 

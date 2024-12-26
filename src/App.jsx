@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion"; // Importer AnimatePres
 import NavBar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Main/Home/Home";
 import About from "./components/About/About";
-// import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
@@ -14,13 +13,13 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
-// import "./scss/app.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
 import { lazy, Suspense } from 'react';
-import Projects from "./components/Projects/Projects";
-import ProjectSingle from "./components/Projects/ProjectPage";
-
+// import Projects from "./components/Projects/Projects";
+// import ProjectSingle from "./components/Projects/ProjectPage";
+import ProjectDetail from "./components/Projects/components/ProjectDetail";
+import Projects from "./components/Projects/components/Projects";
 // const Projects = lazy(() => import('./components/Projects/Projects'));
 // const ProjectSingle = lazy(() => import('./components/Projects/ProjectSingle'));
 
@@ -70,10 +69,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/projects" element={<Projects />} />
-                  <Route
-                    path="/projects/single-project"
-                    element={<ProjectSingle />}
-                  />
+                  <Route path="/projects/:id" element={<ProjectDetail />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
                   <Route path="*" element={<Navigate to="/" />} />

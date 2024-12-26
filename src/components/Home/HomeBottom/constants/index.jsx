@@ -27,6 +27,7 @@ import {
   dcc,
   kelhel,
   microverse,
+  linux
 } from '../../../../try/assets';
 
 export const navLinks = [
@@ -46,21 +47,17 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Developer',
+    title: 'Fullstack Devloppeur',
     icon: frontend,
   },
   {
-    title: 'Developer',
+    title: 'Architecte Réseaux',
     icon: backend,
   },
   {
-    title: 'Developer',
+    title: 'Administrateur Linux',
     icon: ux,
-  },
-  {
-    title: 'Developer',
-    icon: prototyping,
-  },
+  }
 ];
 
 const technologies = [
