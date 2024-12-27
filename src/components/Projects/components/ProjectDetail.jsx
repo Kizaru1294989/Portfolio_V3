@@ -13,7 +13,7 @@ export default function ProjectDetail() {
   if (!project) return <div>Project not found</div>
 
   return (
-    <div style={{justifyContent : 'center' , marginTop : '70px'}}>
+    <div style={{justifyContent : 'center' , marginTop : '100px'}}>
     <motion.div 
       className={styles.projectDetail}
       initial={{ opacity: 0 }}
@@ -65,22 +65,22 @@ export default function ProjectDetail() {
           transition={{ delay: 0.3 }}
         >
           <div className={styles.info}>
-            <h2>About Client</h2>
+            <h2>A propos </h2>
             <p>Name: {project.client.name}</p>
             <p>Services: {project.client.services}</p>
-            <p>Website: {project.client.website}</p>
-            <p>Phone: {project.client.phone}</p>
+            
+
           </div>
 
           <div className={styles.tools}>
             <h2>Tools & Technologies</h2>
             <p>{project.tools.join(', ')}</p>
           </div>
-
+{/* 
           <div className={styles.share}>
-            <h2>Share This</h2>
-            {/* Ajoutez vos liens de partage ici */}
-          </div>
+            <h2>Liens</h2>
+            <p>Website: {project.client.website}</p>
+          </div> */}
         </motion.div>
 
         <motion.div 

@@ -1,5 +1,5 @@
 .projectDetail {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -9,6 +9,7 @@
 }
 
 .backButton {
+  display: flex;
   background-color: #4a5568;
   color: white;
   border: none;
@@ -16,12 +17,11 @@
   border-radius: 0.25rem;
   cursor: pointer;
   font-size: 1rem;
-  margin-bottom: 1rem;
   transition: background-color 0.2s;
 }
 
 .backButton:hover {
-  background-color: white;
+  background-color: #6cb4ee;
 }
 
 .header h1 {
@@ -33,10 +33,13 @@
 .meta {
   display: flex;
   gap: 1rem;
-  color: white;
+  color: #6cb4ee;
 }
 
 .gallery {
+  align-items: center;
+  border-radius: 5rem;
+  background-color: white;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
@@ -64,20 +67,24 @@
 
 .sidebar h2 {
   font-size: 1.5rem;
-  color: white;
+
   margin-bottom: 1rem;
+    color: #6cb4ee;
 }
 
 .info {
   margin-bottom: 2rem;
+  
 }
 
 .info p {
   margin-bottom: 0.5rem;
+    color: white;
 }
 
 .tools {
   margin-bottom: 2rem;
+  color: white;
 }
 
 .share {
@@ -85,17 +92,18 @@
   gap: 1rem;
 }
 
-.share a {
+.share p {
   color: white;
 }
 
-.share a:hover {
-  color: #2d3748;
+.share p:hover {
+  color: white;
+
 }
 
 .mainContent h2 {
   font-size: 1.5rem;
-  color: white;
+  color: #6cb4ee;
   margin-bottom: 1rem;
 }
 

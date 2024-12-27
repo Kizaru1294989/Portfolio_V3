@@ -5,8 +5,9 @@ import { motion } from 'framer-motion'
 import { useParams, useNavigate } from 'react-router-dom'
 import { projects } from '../data/data'
 import styles from './project.module.scss'
+import RainEffect from '../../Geometry/Cloud/Cloud'
 
-
+// backgroundColor:'#101010'
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState('')
   const [category, setCategory] = useState('All Projects')
@@ -37,9 +38,11 @@ export default function Projects() {
   }
 
   return (
-    <motion.div style={{ backgroundColor:'black', justifyContent : 'center' , marginTop : '100px'}}>
-      <div style={{backgroundColor:''}}>
+    <motion.div style={{    justifyContent : 'center' , marginTop : '100px',display : 'flex'}}>
+      <RainEffect/>
+      <div style={{width:'70%',margin:'1%',display : 'flex'}}>
     <div  className={styles.projectsContainer}>
+      
       <motion.h1
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

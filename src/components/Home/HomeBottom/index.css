@@ -65,7 +65,6 @@
     font-size: 16px;
     letter-spacing: 0.05em;
   }
-  
   /* Card Styles */
   .card-gradient {
     background: linear-gradient(135deg, #333333, #66666e);
@@ -98,7 +97,6 @@
     font-weight: bold;
     text-align: center;
   }
-  
   /* Spacing */
   .mt-20 {
     margin-top: 80px;
