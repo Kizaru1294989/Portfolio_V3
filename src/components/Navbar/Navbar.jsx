@@ -14,7 +14,9 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { MdOutlineWork } from "react-icons/md";
+import { MdWorkOutline } from "react-icons/md";
 import SoundBar from "../SoundBoard/SoundBoard";
 import useThemeSwitcher from './useThemeSwitcher';
 import { IoIosMailUnread } from "react-icons/io";
@@ -108,7 +110,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <MdOutlineWork style={iconstyle} /> Expérience
+                <MdWorkOutline style={iconstyle} /> Expérience
               </Nav.Link>
             </Nav.Item>
 
@@ -118,15 +120,14 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <IoIosMailUnread  style={iconstyle} /> Contact
+                <MdOutlinePhoneInTalk   style={iconstyle} /> Contact
               </Nav.Link>
             </Nav.Item>
 
-
+            <Nav.Item>
             <div
 						onClick={() => setTheme(activeTheme)}
-						aria-label="Theme Switcher"
-						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+						className=""
 					>
 						{activeTheme === 'dark' ? (
               <>
@@ -138,6 +139,8 @@ function NavBar() {
               </>
 						)}
 					</div>
+            </Nav.Item>
+
 
             <Nav.Item className="fork-btn">
               <SoundBar />

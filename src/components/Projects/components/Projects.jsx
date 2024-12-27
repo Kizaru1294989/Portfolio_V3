@@ -6,6 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { projects } from '../data/data'
 import styles from './project.module.scss'
 
+
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState('')
   const [category, setCategory] = useState('All Projects')
@@ -36,13 +37,15 @@ export default function Projects() {
   }
 
   return (
-    <div className={styles.projectsContainer}>
+    <motion.div style={{ backgroundColor:'black', justifyContent : 'center' , marginTop : '100px'}}>
+      <div style={{backgroundColor:''}}>
+    <div  className={styles.projectsContainer}>
       <motion.h1
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        Projects portfolio
+        Projets
       </motion.h1>
 
       <div className={styles.searchSection}>
@@ -56,10 +59,11 @@ export default function Projects() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option>All Projects</option>
-          <option>Web Application</option>
-          <option>Mobile Application</option>
-          <option>UI/UX Design</option>
+          <option>Tous les projets</option>
+          <option>Développement</option>
+          <option>Réseaux</option>
+          <option>Système</option>
+          <option>Red Team</option>
         </select>
       </div>
 
@@ -77,7 +81,7 @@ export default function Projects() {
             whileHover={{ scale: 1.03 }}
             onClick={() => navigate(`/projects/${project.id}`)}
           >
-            <img src={project.image} alt={project.title} />
+            <img style={{height : 'auto'}}  src={project.image} alt={project.title} />
             <div className={styles.cardContent}>
               <h3>{project.title}</h3>
               <p>{project.category}</p>
@@ -86,6 +90,8 @@ export default function Projects() {
         ))}
       </motion.div>
     </div>
+    </div>
+    </motion.div>
   )
 }
 

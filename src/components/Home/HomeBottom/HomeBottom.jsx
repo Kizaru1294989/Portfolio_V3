@@ -13,6 +13,7 @@ import Shader from "../../Geometry/shader";
 import ParticlesBillboards from "../../Geometry/Circle";
 import Resume from "./Resume";
 
+
 function HomeBottom() {
   return (
     <Container fluid className="home-about-section" id="about">
@@ -46,7 +47,7 @@ function HomeBottom() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
+              {/* <li className="social-icons">
                 <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
@@ -55,7 +56,7 @@ function HomeBottom() {
                 >
                   <AiOutlineTwitter />
                 </a>
-              </li>
+              </li> */}
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/soumyajit4419/"
@@ -66,7 +67,7 @@ function HomeBottom() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
+              {/* <li className="social-icons">
                 <a
                   href=""
                   target="_blank"
@@ -75,7 +76,7 @@ function HomeBottom() {
                 >
                   <AiFillInstagram />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>

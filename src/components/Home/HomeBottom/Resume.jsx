@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from './utils/motion';
 import { SectionWrapper } from './hoc';
 import "./index.css"
 
+
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
@@ -22,19 +23,22 @@ const Resume = () => {
   return (
     <div style={{ marginTop: '-6rem' }}>
       <motion.div variants={textVariant()}>
-        <p className="section-sub-text">Introduction</p>
-        <h2 className="section-head-text">Overview.</h2>
+        {/* <p className="section-sub-text">Introduction</p> */}
+        <h2 className="section-head-text">Introduction.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 section-sub-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        Passionné par la cybersécurité offensive et déterminé 
+        à m’investir dans le Red Team, j’apporte une expérience 
+        riche et complète en tant que développeur fullstack, 
+        architecte réseau et expert en environnement Linux.
+         Cette combinaison unique de compétences techniques
+          et stratégiques me permet de comprendre les systèmes
+           dans leur globalité, d’identifier leurs vulnérabilités 
+           et de contribuer efficacement à des simulations d’attaques
+            réalistes et percutantes
       </motion.p>
 
       <div className="mt-20 flex-center" style={{ gap: '40px', flexWrap: 'wrap' }}>

@@ -13,6 +13,7 @@ export default function ProjectDetail() {
   if (!project) return <div>Project not found</div>
 
   return (
+    <div style={{justifyContent : 'center' , marginTop : '70px'}}>
     <motion.div 
       className={styles.projectDetail}
       initial={{ opacity: 0 }}
@@ -46,6 +47,7 @@ export default function ProjectDetail() {
       >
         {project.images.map((image, index) => (
           <motion.img
+          style={{height : 'auto'}}
             key={index}
             src={image}
             alt={`${project.title} - Image ${index + 1}`}
@@ -98,5 +100,6 @@ export default function ProjectDetail() {
         </motion.div>
       </div>
     </motion.div>
+    </div>
   )
 }

@@ -22,7 +22,7 @@ import menu from './icons/menu.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
-import linux from "./icons/kisspng-linux-tux-logo-linux-5abe15cfb81684.0405360015224068637541.png"
+import linux from "./icons/103144482-personal-computer-pc-system-unit-monitor-keyboard-and-mouse-white-icon-with-shadow-on.jpg"
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
