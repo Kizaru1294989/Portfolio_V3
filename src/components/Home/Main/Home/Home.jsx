@@ -12,6 +12,7 @@ import ParticleAnimation from "../../../Geometry/Particules/WaveTube";
 import { ButtonHome } from "../../../Button/ButtonHome";
 import { motion, AnimatePresence } from "framer-motion";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import ButtonBackgroundShine from "../../../Button/ButtonBackgroundShine";
 
 function Home() {
   const [replay, setReplay] = React.useState(true);
@@ -43,6 +44,7 @@ function Home() {
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <ButtonHome Text={"Contact"} Icon={<TelegramIcon />} />
                 <ButtonHome Text={"à propos"} Icon={<TelegramIcon />} />
+                <ButtonBackgroundShine/>
               </div>
             </Col>
 

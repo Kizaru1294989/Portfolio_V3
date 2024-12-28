@@ -48,10 +48,12 @@
     "react-tsparticles": "^1.42.2",
     "react-zoom-pan-pinch": "^3.6.1",
     "sass": "^1.77.8",
+    "shiki": "^1.24.4",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.168.0",
+    "typescript": "^5.7.2",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
