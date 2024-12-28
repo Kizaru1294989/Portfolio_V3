@@ -8,7 +8,7 @@ const Box = styled.div`
   cursor: pointer;
   position: fixed;
   right: 8rem;
-  top: 3rem;
+  top: 2.5rem;
   z-index: 3;
 
   & > *:nth-child(1) {
@@ -32,8 +32,7 @@ const Box = styled.div`
     color: #00ff7f;
     font-size: 18px;
     position: absolute;
-    margin-top: -20px;
-    left: -60px;
+
     opacity: 0.9;
     line-height: 20 px;
   }

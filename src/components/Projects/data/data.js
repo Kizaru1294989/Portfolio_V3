@@ -8,6 +8,7 @@ import python from "../../../Assets/Projects/Arista/logo-python.png"
 import MLAG from '../../../Assets/Projects/Arista/Protocoles/MLAG.svg'
 import BGP from '../../../Assets/Projects/Arista/Protocoles/BGP.svg'
 import MPLS from '../../../Assets/Projects/Anssi/mpls-multi-protocol-label-switching-network-removebg-preview.png'
+import crack from "../../../Assets/Projects/Aircrack-ng/wall.png"
 
 export const projects = [
     {
@@ -150,7 +151,7 @@ export const projects = [
       id: 5,
       title: "Script Aircrack-ng Bash",
       category: "Réseaux/Sécurité",
-      image: anssi,
+      image: crack,
       client: {
         name: "Phoenix Digital",
         services: "Mobile Development",

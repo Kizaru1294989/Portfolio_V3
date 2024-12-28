@@ -16,7 +16,7 @@ import Resume from "./Resume";
 
 function HomeBottom() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid style={{display : 'flex' , marginTop : '50px'}} className="home-about-section" id="about">
       <Container>
         <Row
           style={{

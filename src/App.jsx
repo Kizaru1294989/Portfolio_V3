@@ -15,9 +15,6 @@ import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
-import { lazy, Suspense } from 'react';
-// import Projects from "./components/Projects/Projects";
-// import ProjectSingle from "./components/Projects/ProjectPage";
 import ProjectDetail from "./components/Projects/components/ProjectDetail";
 import Projects from "./components/Projects/components/Projects";
 // const Projects = lazy(() => import('./components/Projects/Projects'));
@@ -29,15 +26,15 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad(false);
-    }, 1000); // Transition après 5 secondes
+    }, 1000); 
     return () => clearTimeout(timer);
   }, []);
 
-  // Animation des transitions
+
   const transitionVariants = {
-    initial: { opacity: 1, scale: 1 }, // État initial
-    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }, // Animation de sortie
-    enter: { opacity: 0 }, // (facultatif) Effet avant la sortie
+    initial: { opacity: 1, scale: 1 }, 
+    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }, 
+    enter: { opacity: 0 }, 
   };
 
   return (

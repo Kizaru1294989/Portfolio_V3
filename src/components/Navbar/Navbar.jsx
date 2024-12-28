@@ -38,6 +38,15 @@ function NavBar() {
     }
   }
 
+  const language_button = {
+    display: "flex",
+    cursor: "pointer",
+    position: "fixed",
+    right: "15rem",
+    top: "2.5rem",
+
+  }
+
   window.addEventListener("scroll", scrollHandler);
 
   const iconstyle = {
@@ -100,7 +109,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={iconstyle} /> CV
+                <CgFileDocument style={iconstyle} /> Portfolio
               </Nav.Link>
             </Nav.Item>
 
@@ -127,7 +136,7 @@ function NavBar() {
             <Nav.Item>
             <div
 						onClick={() => setTheme(activeTheme)}
-						className=""
+						style={language_button}
 					>
 						{activeTheme === 'dark' ? (
               <>
@@ -141,10 +150,10 @@ function NavBar() {
 					</div>
             </Nav.Item>
 
-
-            <Nav.Item className="fork-btn">
+            <Nav.Item>
               <SoundBar />
             </Nav.Item>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
