@@ -116,7 +116,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/experience"
                 onClick={() => updateExpanded(false)}
               >
                 <MdWorkOutline style={iconstyle} /> Expérience

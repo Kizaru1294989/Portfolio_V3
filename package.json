@@ -46,6 +46,7 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-tsparticles": "^1.42.2",
+    "react-vertical-timeline-component": "^3.5.3",
     "react-zoom-pan-pinch": "^3.6.1",
     "sass": "^1.77.8",
     "shiki": "^1.24.4",
