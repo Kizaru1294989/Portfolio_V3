@@ -6,7 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { projects } from '../data/data'
 import styles from './project.module.scss'
 import RainEffect from '../../Geometry/Cloud/Cloud'
-
+import TerrainViewer from "../../Geometry/three_animation/Montain"
 // backgroundColor:'#101010'
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -41,7 +41,7 @@ export default function Projects() {
     <motion.div style={{    justifyContent : 'center' , marginTop : '100px',display : 'flex'}}>
       <RainEffect/>
       <div style={{width:'70%',margin:'1%',display : 'flex'}}>
-    <div  className={styles.projectsContainer}>
+      <div className={styles.projectsContainer}>
       
       <motion.h1
         initial={{ y: -20, opacity: 0 }}

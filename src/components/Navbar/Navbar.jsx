@@ -79,7 +79,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={iconstyle} /> Home
+                <AiOutlineHome style={iconstyle} /> Accueil
               </Nav.Link>
             </Nav.Item>
 
@@ -99,7 +99,7 @@ function NavBar() {
                 to="/projects"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen style={iconstyle} /> Projects
+                <AiOutlineFundProjectionScreen style={iconstyle} /> Projets
               </Nav.Link>
             </Nav.Item>
 
