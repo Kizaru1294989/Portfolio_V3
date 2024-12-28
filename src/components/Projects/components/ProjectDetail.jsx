@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { projects } from '../data/data'
 import styles from './detail.module.scss'
-
+import ImageSlideshow from './SlideShow/index';
 export default function ProjectDetail() {
   const { id } = useParams() // Récupère l'ID depuis l'URL
   const navigate = useNavigate() // Pour la navigation
@@ -99,7 +99,17 @@ export default function ProjectDetail() {
           </div>
         </motion.div>
       </div>
+      {project.slide ? (
+ 
+   <ImageSlideshow
+   image1={project.slide1}
+   image2={project.slide2}
+   image3={project.slide3}
+   />
+  
+) : null}
     </motion.div>
     </div>
+
   )
 }

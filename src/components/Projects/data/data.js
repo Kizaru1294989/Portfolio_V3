@@ -5,12 +5,27 @@ import anssi from "../../../Assets/Projects/Anssi/logo_anssi.png"
 import elk from "../../../Assets/Icons/elk-logo-1-removebg-preview.png"
 import scrap from "../../../Assets/Projects/Scrape/1_IVCJe9HjFy3WIidHv18Ocg.jpg"
 import python from "../../../Assets/Projects/Arista/logo-python.png"
-
+import MLAG from '../../../Assets/Projects/Arista/Protocoles/MLAG.svg'
+import BGP from '../../../Assets/Projects/Arista/Protocoles/BGP.svg'
+import MPLS from '../../../Assets/Projects/Anssi/mpls-multi-protocol-label-switching-network-removebg-preview.png'
 
 export const projects = [
     {
       id: 1,
       title: "Arista Automatisation",
+      slide:true,
+      slide1:{
+        img : MLAG,
+        title : "Mlag",
+      },
+      slide2:{
+        img : BGP,
+        title : "Bgp",
+      },
+      slide3:{
+        img : MLAG,
+        title : "Vxlan Evpn L2",
+      },
       category: "Réseaux/DevSecops",
       image: arista,
       client: {
@@ -37,8 +52,8 @@ export const projects = [
       category: "Réseaux/Sécurité",
       image: anssi,
       client: {
-        name: "Phoenix Digital",
-        services: "Mobile Development",
+        name: "Infrastructure type Anssi",
+        services: "HA A/A MPLS OSFP BGP VXLAN EVPN L2",
         website: "https://phoenix.com",
         phone: "555 9876 543"
       },
@@ -46,7 +61,7 @@ export const projects = [
       challenge: "Creating a seamless mobile experience for project management.",
       tools: ["React Native", "Firebase", "Redux"],
       images: [
-        "/placeholder.svg?height=400&width=600",
+        MPLS,
         "/placeholder.svg?height=400&width=600",
         "/placeholder.svg?height=400&width=600"
       ]
@@ -73,7 +88,7 @@ export const projects = [
     },
     {
       id: 4,
-      title: "Scraping Web",
+      title: "Web Scraping",
       category: "Réseaux/DevSecops",
       image: scrap,
       client: {
@@ -92,8 +107,8 @@ export const projects = [
       ]
     },
     {
-      id: 2,
-      title: "Infrastructure type Anssi",
+      id: 5,
+      title: "Spyware Python",
       category: "Réseaux/Sécurité",
       image: anssi,
       client: {
@@ -112,8 +127,8 @@ export const projects = [
       ]
     },
     {
-      id: 3,
-      title: "Cluster ELK",
+      id: 6,
+      title: "NASA interface API C#",
       category: "Web Application",
       image: elk,
       client: {
@@ -131,7 +146,66 @@ export const projects = [
         "/placeholder.svg?height=400&width=600"
       ]
     },
-
+    {
+      id: 5,
+      title: "Script Aircrack-ng Bash",
+      category: "Réseaux/Sécurité",
+      image: anssi,
+      client: {
+        name: "Phoenix Digital",
+        services: "Mobile Development",
+        website: "https://phoenix.com",
+        phone: "555 9876 543"
+      },
+      objective: "Build a modern mobile app for digital agency management.",
+      challenge: "Creating a seamless mobile experience for project management.",
+      tools: ["React Native", "Firebase", "Redux"],
+      images: [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ]
+    },
+    {
+      id: 8,
+      title: "Infrastructure NGINX",
+      category: "Web Application",
+      image: elk,
+      client: {
+        name: "Google Health",
+        services: "Web Development & UI Design",
+        website: "https://health.google.com",
+        phone: "555 1234 567"
+      },
+      objective: "Create an intuitive health platform for managing patient data.",
+      challenge: "Developing a secure and user-friendly interface for healthcare professionals.",
+      tools: ["React", "Node.js", "MongoDB", "CSS"],
+      images: [
+        "../../../Assets/074A7445.jpg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ]
+    },
+    {
+      id: 9,
+      title: "Browser Stealer",
+      category: "Web Application",
+      image: elk,
+      client: {
+        name: "Google Health",
+        services: "Web Development & UI Design",
+        website: "https://health.google.com",
+        phone: "555 1234 567"
+      },
+      objective: "Create an intuitive health platform for managing patient data.",
+      challenge: "Developing a secure and user-friendly interface for healthcare professionals.",
+      tools: ["React", "Node.js", "MongoDB", "CSS"],
+      images: [
+        "../../../Assets/074A7445.jpg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=400&width=600"
+      ]
+    },
   ];
   
   
