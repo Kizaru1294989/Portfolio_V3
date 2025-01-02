@@ -1,4 +1,4 @@
-import arista from "../../../Assets/Projects/Arista/arista.png"
+import arista from "../../../Assets/Projects/Arista/arista1.png"
 import ansible from "../../../Assets/Projects/Arista/formation-ansible.png"
 import arista_logo from "../../../Assets/Projects/Arista/blob.png"
 import anssi from "../../../Assets/Projects/Anssi/logo_anssi.png"

@@ -9,9 +9,11 @@ import {
   import { SectionWrapper } from '../Home/HomeBottom/hoc';
   import { download, downloadHover, resume } from '../../try/assets';
   import { textVariant } from '../Home/HomeBottom/utils/motion';
+  import RainEffect from '../Geometry/Cloud/Cloud';
   import "./index.css"
   
   const ExperienceCard = ({ experience }) => (
+ 
     <VerticalTimelineElement
       contentStyle={{
         background: '#eaeaec',
@@ -55,16 +57,17 @@ import {
   const Experience = () => {
     return (
       <>
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
+         {/* <RainEffect/> */}
+        <motion.div  variants={textVariant()}>
+          {/* <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
             What I've done so far
-          </p>
-          <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-            Work Experience.
+          </p> */}
+          <h2 style={{color : 'white',marginTop : '5rem'}} className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
+            Expérience Professionnelle
           </h2>
         </motion.div>
   
-        <div className="mt-20 flex flex-col">
+        <div style={{backgroundColor : 'gray'}} className="mt-20 flex flex-col">
           <VerticalTimeline className="vertical-timeline-custom-line">
             {experiences.map((experience, index) => (
               <ExperienceCard key={index} experience={experience} />

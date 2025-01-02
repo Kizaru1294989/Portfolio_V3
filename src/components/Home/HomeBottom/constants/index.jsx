@@ -121,25 +121,25 @@ const services = [
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'Stage Full-Stack Devellopeur',
+    company_name: 'Jensee',
+    icon: frontend,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Janvier 2022 - Avril 2022',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
+    title: 'Freelance Dev Web',
+    company_name: 'Atlas',
+    icon: frontend,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: 'Juillet 2022 - Septembre 2024',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
+    title: 'Alternance Net-Devops Securité',
+    company_name: 'Exaprobe',
+    icon: backend,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    date: 'Octobre 2023 - Novembre 2026',
   },
   {
     title: 'Full Stack Developer',

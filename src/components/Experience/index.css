@@ -29,13 +29,13 @@
   src: url('./fonts/overcame-outline.woff');
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   color-scheme: dark;
-}
+} */
 
 .nav-links::after {
   content: '';
@@ -51,10 +51,7 @@
   width: 70%;
 }
 
-#about {
-  margin-left: -24px;
-  font-size: 100px;
-}
+
 
 #projects {
   margin-left: -2px;

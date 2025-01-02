@@ -126,7 +126,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/contact"
                 onClick={() => updateExpanded(false)}
               >
                 <MdOutlinePhoneInTalk   style={iconstyle} /> Contact

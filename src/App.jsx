@@ -18,6 +18,7 @@ import Preview from "./components/Loading/Preview/preview";
 import ProjectDetail from "./components/Projects/components/ProjectDetail";
 import Projects from "./components/Projects/components/Projects";
 import Experience from "./components/Experience";
+import ContactComponent from "./components/Contact/ContactComponent";
 // const Projects = lazy(() => import('./components/Projects/Projects'));
 // const ProjectSingle = lazy(() => import('./components/Projects/ProjectSingle'));
 
@@ -71,7 +72,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
                   <Route path="/experience" element={<Experience />} />
-                  <Route path="/contact" element={<About />} />
+                  <Route path="/contact" element={<ContactComponent />} />
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
           
