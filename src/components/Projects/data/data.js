@@ -2,6 +2,7 @@ import arista from "../../../Assets/Projects/Arista/arista1.png"
 import ansible from "../../../Assets/Projects/Arista/formation-ansible.png"
 import arista_logo from "../../../Assets/Projects/Arista/blob.png"
 import anssi from "../../../Assets/Projects/Anssi/logo_anssi.png"
+import anssi_schéma from "../../../Assets/Projects/Anssi/ANSI-schema.png"
 import elk from "../../../Assets/Icons/elk-logo-1-removebg-preview.png"
 import scrap from "../../../Assets/Projects/Scrape/1_IVCJe9HjFy3WIidHv18Ocg.jpg"
 import python from "../../../Assets/Projects/Arista/logo-python.png"
@@ -13,7 +14,7 @@ import crack from "../../../Assets/Projects/Aircrack-ng/wall.png"
 export const projects = [
     {
       id: 1,
-      title: "Arista Automatisation",
+      title: "Arista Automatisation VXLAN EVPN",
       slide:true,
       slide1:{
         img : MLAG,
@@ -28,7 +29,7 @@ export const projects = [
         title : "Vxlan Evpn L2",
       },
       category: "Réseaux/DevSecops",
-      image: arista,
+      image: python,
       client: {
         name: "Arista Automatisation",
         services: "MLAG BGP EVPN VXLAN",
@@ -49,11 +50,11 @@ export const projects = [
     },
     {
       id: 2,
-      title: "Infrastructure type Anssi",
+      title: "Infrastructure aux normes Anssi",
       category: "Réseaux/Sécurité",
       image: anssi,
       client: {
-        name: "Infrastructure type Anssi",
+        name: "Infrastructure Respectant les normes Anssi",
         services: "HA A/A MPLS OSFP BGP VXLAN EVPN L2",
         website: "https://phoenix.com",
         phone: "555 9876 543"
@@ -65,7 +66,20 @@ export const projects = [
         MPLS,
         "/placeholder.svg?height=400&width=600",
         "/placeholder.svg?height=400&width=600"
-      ]
+      ],
+       slide:true,
+      slide1:{
+        img : anssi_schéma,
+        title : "Mlag",
+      },
+      slide2:{
+        img : BGP,
+        title : "Bgp",
+      },
+      slide3:{
+        img : MLAG,
+        title : "Vxlan Evpn L2",
+      },
     },
     {
       id: 3,
