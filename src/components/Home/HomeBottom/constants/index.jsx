@@ -27,37 +27,37 @@ import {
   dcc,
   kelhel,
   microverse,
-  linux
-} from '../../../../try/assets';
+  linux,
+} from "../../../../try/assets";
 
 export const navLinks = [
   {
-    id: 'about',
-    title: 'About',
+    id: "about",
+    title: "About",
   },
   {
-    id: 'projects',
-    title: 'Projects',
+    id: "projects",
+    title: "Projects",
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: "contact",
+    title: "Contact",
   },
 ];
 
 const services = [
   {
-    title: 'Fullstack Devloppeur',
+    title: "Fullstack Devloppeur",
     icon: frontend,
   },
   {
-    title: 'Architecte Réseaux',
+    title: "Architecte Réseaux",
     icon: backend,
   },
   {
-    title: 'Administrateur Système',
+    title: "Administrateur Système",
     icon: prototyping,
-  }
+  },
 ];
 
 // const technologies = [
@@ -121,32 +121,32 @@ const services = [
 
 const experiences = [
   {
-    title: 'Stage Full-Stack Devellopeur',
-    company_name: 'Jensee',
+    title: "Stage Full-Stack Devellopeur",
+    company_name: "Jensee",
     icon: frontend,
-    iconBg: '#333333',
-    date: 'Janvier 2022 - Avril 2022',
+    iconBg: "#333333",
+    date: "Janvier 2022 - Avril 2022",
   },
   {
-    title: 'Freelance Dev Web',
-    company_name: 'Atlas',
+    title: "Freelance Dev Web",
+    company_name: "Atlas",
     icon: frontend,
-    iconBg: '#333333',
-    date: 'Juillet 2022 - Septembre 2024',
+    iconBg: "#333333",
+    date: "Juillet 2022 - Septembre 2024",
   },
   {
-    title: 'Alternance Net-Devops Securité',
-    company_name: 'Exaprobe',
+    title: "Alternance Net-Devops Securité",
+    company_name: "Exaprobe",
     icon: backend,
-    iconBg: '#333333',
-    date: 'Octobre 2023 - Novembre 2026',
+    iconBg: "#333333",
+    date: "Octobre 2023 - Novembre 2026",
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
+    title: "Full Stack Developer",
+    company_name: "Diversity Cyber Council",
     icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    iconBg: "#333333",
+    date: "Sep 2022 - Present",
   },
 ];
 
@@ -265,4 +265,4 @@ const experiences = [
 //   },
 // ];
 
-export { services , experiences};
+export { services, experiences };

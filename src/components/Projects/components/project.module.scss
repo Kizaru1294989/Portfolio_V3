@@ -35,7 +35,10 @@
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonnes responsive */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Colonnes responsive */
   gap: 2rem;
 }
 
@@ -49,7 +52,9 @@
   box-shadow: 0px 35px 120px -15px #1f1f1f;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .projectCard:hover {
@@ -59,7 +64,6 @@
 
 .projectCard img {
   width: 100%;
-
 }
 
 .cardContent {
@@ -68,7 +72,7 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.7); 
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   box-sizing: border-box;
   display: flex;

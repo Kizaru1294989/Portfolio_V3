@@ -28,15 +28,14 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoad(false);
-    }, 1000); 
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
-
   const transitionVariants = {
-    initial: { opacity: 1, scale: 1 }, 
-    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }, 
-    enter: { opacity: 0 }, 
+    initial: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } },
+    enter: { opacity: 0 },
   };
 
   return (
@@ -58,13 +57,13 @@ function App() {
             initial="enter"
             animate="initial"
             variants={transitionVariants}
-            exit={{ opacity: 0 }} 
+            exit={{ opacity: 0 }}
           >
             <Router>
               <div className="App">
                 <NavBar />
                 <ScrollToTop />
-              
+
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/projects" element={<Projects />} />
@@ -75,7 +74,7 @@ function App() {
                   <Route path="/contact" element={<ContactComponent />} />
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
-          
+
                 <Footer />
               </div>
             </Router>

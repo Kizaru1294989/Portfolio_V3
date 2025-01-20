@@ -42,7 +42,7 @@ function createParticle() {
     b: 255, // Maximum pour une intensité bleue
     a: rand(0.1, 0.9), // Transparence aléatoire
   };
-  
+
   return {
     x: -2,
     y: -2,

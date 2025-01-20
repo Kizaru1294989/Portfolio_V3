@@ -13,10 +13,14 @@ import Shader from "../../Geometry/shader";
 import ParticlesBillboards from "../../Geometry/Circle";
 import Resume from "./Resume";
 
-
 function HomeBottom() {
   return (
-    <Container fluid style={{display : 'flex' , marginTop : '50px'}} className="home-about-section" id="about">
+    <Container
+      fluid
+      style={{ display: "flex", marginTop: "50px" }}
+      className="home-about-section"
+      id="about"
+    >
       <Container>
         <Row
           style={{
@@ -27,8 +31,7 @@ function HomeBottom() {
           }}
         >
           {/* <Shader/> */}
-          <Resume/>
-
+          <Resume />
         </Row>
         <Row>
           <Col md={12} className="home-about-social">

@@ -2,11 +2,11 @@ import { React, useEffect, useState } from "react";
 import { HandleChange } from "../../tools/Handlechange";
 import ValidatorEmail from "../Validator/ValidatorEmail";
 
-export const ContactContainer = () =>{
+export const ContactContainer = () => {
   const [formValue, setFormValue] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [error, setError] = useState({
@@ -20,32 +20,28 @@ export const ContactContainer = () =>{
     message: "",
   });
   const [formstate, setformstate] = useState({
-    sendemail:false,
+    sendemail: false,
   });
 
-  const [step , setstep] = useState(0)
+  const [step, setstep] = useState(0);
   const HandleSubmit = async (event) => {
     event.preventDefault();
-    switch(step) {
-      case 0 :
+    switch (step) {
+      case 0:
         try {
           // if (confirmation) {
           //   setPage((page) => page + 1);
           // } else {
           //   setPage((page) => page);
           // }
-        }
-        catch (error) {
-           console.error(error);
+        } catch (error) {
+          console.error(error);
         }
         break;
-        default:
-          
+      default:
     }
-  }
+  };
   return (
-
-    <ContactComponent/>
-  )
-
-}
+    <ContactComponent HandleChange={HandleChange} HandleSubmit={HandleSubmit} />
+  );
+};
