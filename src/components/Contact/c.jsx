@@ -1,9 +1,9 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const inputStyle =
-  "w-full p-3 bg-white text-gray-800 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300"
-const labelStyle = "block text-sm font-medium text-gray-200 mb-2"
+  "w-full p-3 bg-white text-gray-800 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300";
+const labelStyle = "block text-sm font-medium text-gray-200 mb-2";
 
 export default function ContactComponent() {
   const [formState, setFormState] = useState({
@@ -11,20 +11,20 @@ export default function ContactComponent() {
     lastName: "",
     email: "",
     message: "",
-  })
+  });
 
   const handleChange = (e) => {
     setFormState({
       ...formState,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formState)
+    e.preventDefault();
+    console.log("Form submitted:", formState);
     // Ici, vous pouvez ajouter la logique pour envoyer les données du formulaire
-  }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#1f1f1f]">
@@ -34,9 +34,15 @@ export default function ContactComponent() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-md p-8 bg-gray-900 rounded-xl shadow-2xl"
       >
-        <h2 className="text-3xl font-bold mb-8 text-center text-white">Contactez-nous</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-white">
+          Contactez-nous
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
             <label htmlFor="firstName" className={labelStyle}>
               Prénom
             </label>
@@ -52,7 +58,11 @@ export default function ContactComponent() {
             />
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+          >
             <label htmlFor="lastName" className={labelStyle}>
               Nom
             </label>
@@ -68,7 +78,11 @@ export default function ContactComponent() {
             />
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             <label htmlFor="email" className={labelStyle}>
               Email
             </label>
@@ -84,7 +98,11 @@ export default function ContactComponent() {
             />
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 }}>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+          >
             <label htmlFor="message" className={labelStyle}>
               Message
             </label>
@@ -110,6 +128,5 @@ export default function ContactComponent() {
         </form>
       </motion.div>
     </div>
-  )
+  );
 }
-

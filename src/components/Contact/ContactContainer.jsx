@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { HandleChange } from "../../tools/Handlechange";
 import ValidatorEmail from "../Validator/ValidatorEmail";
+import ContactComponent from "./ContactComponent";
 
 export const ContactContainer = () => {
   const [formValue, setFormValue] = useState({
@@ -42,6 +43,17 @@ export const ContactContainer = () => {
     }
   };
   return (
-    <ContactComponent HandleChange={HandleChange} HandleSubmit={HandleSubmit} />
+    <ContactComponent
+      HandleChange={HandleChange}
+      HandleSubmit={HandleSubmit}
+      formstate={formstate}
+      formValue={formValue}
+      setFormValue={setFormValue}
+      setError={setError}
+      setErrortype={setErrortype}
+      setformstate={setformstate}
+      errortype={errortype}
+      error={error}
+    />
   );
 };

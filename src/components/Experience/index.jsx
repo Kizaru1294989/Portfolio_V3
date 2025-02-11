@@ -18,18 +18,15 @@ const ExperienceCard = ({ experience }) => (
     contentStyle={{
       background: "#1f1f1f",
       color: "white",
-      borderRadius : '20px',
-      boxShadow:
-        "0px 4px 10px rgba(0, 0, 0, 0.8)",
+      borderRadius: "20px",
+      boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.8)",
     }}
     contentArrowStyle={{
       borderRight: "7px solid  white",
     }}
     date={
       <div>
-        <h3 >
-          {experience.date}
-        </h3>
+        <h3>{experience.date}</h3>
       </div>
     }
     iconStyle={{ background: experience.iconBg }}
@@ -44,15 +41,8 @@ const ExperienceCard = ({ experience }) => (
     }
   >
     <div>
-      <h3>
-        {experience.title}
-      </h3>
-      <p
-
-        style={{ margin: 0 , color : '#6cb4ee' }}
-      >
-        {experience.company_name}
-      </p>
+      <h3>{experience.title}</h3>
+      <p style={{ margin: 0, color: "#6cb4ee" }}>{experience.company_name}</p>
     </div>
   </VerticalTimelineElement>
 );
@@ -65,23 +55,18 @@ const Experience = () => {
         {/* <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
             What I've done so far
           </p> */}
-        <h1
-          style={{ color: "white", marginTop: "5rem" }}
-
-        >
+        <h1 style={{ color: "white", marginTop: "5rem" }}>
           Expérience Professionnelle
         </h1>
       </motion.div>
 
-      <div
-  className="card"
->
-  <VerticalTimeline className="vertical-timeline-custom-line">
-    {experiences.map((experience, index) => (
-      <ExperienceCard key={index} experience={experience} />
-    ))}
-  </VerticalTimeline>
-</div>
+      <div className="card">
+        <VerticalTimeline className="vertical-timeline-custom-line">
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
     </>
   );
 };

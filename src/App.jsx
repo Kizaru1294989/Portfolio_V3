@@ -13,12 +13,14 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import "./scss/main.scss";
+// import './scss/index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preview from "./components/Loading/Preview/preview";
 import ProjectDetail from "./components/Projects/components/ProjectDetail";
 import Projects from "./components/Projects/components/Projects";
 import Experience from "./components/Experience";
 import ContactComponent from "./components/Contact/ContactComponent";
+import { GlobeDemo } from "./components/Planet/demo";
 // const Projects = lazy(() => import('./components/Projects/Projects'));
 // const ProjectSingle = lazy(() => import('./components/Projects/ProjectSingle'));
 
@@ -40,6 +42,11 @@ function App() {
 
   return (
     <>
+    {/* <div>
+    <GlobeDemo/>
+
+    </div> */}
+ 
       <AnimatePresence mode="wait">
         {load ? (
           <motion.div

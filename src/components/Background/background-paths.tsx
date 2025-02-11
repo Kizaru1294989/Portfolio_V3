@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 function FloatingPaths({ position }: { position: number }) {
   const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -15,11 +15,15 @@ function FloatingPaths({ position }: { position: number }) {
     } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
     color: `rgba(15,23,42,${0.1 + i * 0.03})`,
     width: 0.5 + i * 0.03,
-  }))
+  }));
 
   return (
     <div className="absolute inset-0 pointer-events-none">
-      <svg className="w-full h-full text-slate-950 dark:text-white" viewBox="0 0 696 316" fill="none">
+      <svg
+        className="w-full h-full text-slate-950 dark:text-white"
+        viewBox="0 0 696 316"
+        fill="none"
+      >
         <title>Background Paths</title>
         {paths.map((path) => (
           <motion.path
@@ -43,15 +47,15 @@ function FloatingPaths({ position }: { position: number }) {
         ))}
       </svg>
     </div>
-  )
+  );
 }
 
 export default function BackgroundPaths({
   title = "Background Paths",
 }: {
-  title?: string
+  title?: string;
 }) {
-  const words = title.split(" ")
+  const words = title.split(" ");
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
@@ -105,7 +109,9 @@ export default function BackgroundPaths({
                             group-hover:-translate-y-0.5 border border-black/10 dark:border-white/10
                             hover:shadow-md dark:hover:shadow-neutral-800/50"
             >
-              <span className="opacity-90 group-hover:opacity-100 transition-opacity">Discover Excellence</span>
+              <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+                Discover Excellence
+              </span>
               <span
                 className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
                                 transition-all duration-300"
@@ -117,6 +123,5 @@ export default function BackgroundPaths({
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
-

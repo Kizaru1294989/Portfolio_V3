@@ -1,3 +1,5 @@
+"use client"
+
 import createGlobe, { COBEOptions } from "cobe"
 import { useCallback, useEffect, useRef, useState } from "react"
 
@@ -91,6 +93,7 @@ export function Globe({
     return () => globe.destroy()
   }, [])
 
+  
   return (
     <div
       className={cn(

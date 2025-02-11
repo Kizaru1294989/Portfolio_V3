@@ -35,10 +35,8 @@
   color-scheme: dark;
 } */
 
-.content-style{
-  
+.content-style {
 }
-
 
 .card {
   border-radius: 10px;
@@ -49,8 +47,6 @@
   flex-direction: column; /* Les éléments s'empilent verticalement */
   margin-top: 5rem; /* Équivaut à mt-20 en Tailwind (20 * 4px = 80px) */
 }
-
-
 
 .nav-links::after {
   content: "";
