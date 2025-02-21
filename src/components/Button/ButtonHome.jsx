@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-export const ButtonHome = ({ Icon, Text }) => {
+export const ButtonHome = ({ Icon, Text , href }) => {
   return (
     <Button
       sx={{
@@ -13,6 +13,7 @@ export const ButtonHome = ({ Icon, Text }) => {
       }}
       startIcon={Icon}
       className="btn draw-border"
+      href={href}
     >
       {Text}
     </Button>

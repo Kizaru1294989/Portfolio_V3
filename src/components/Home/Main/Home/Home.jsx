@@ -42,8 +42,8 @@ function Home() {
                 <Type />
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <ButtonHome Text={"Contact"} Icon={<TelegramIcon />} />
-                <ButtonHome Text={"à propos"} Icon={<TelegramIcon />} />
+                <ButtonHome href={"/contact"} Text={"Contact"} Icon={<TelegramIcon />} />
+                <ButtonHome href={"/about"} Text={"à propos"} Icon={<TelegramIcon />} />
                 {/* <ButtonBackgroundShine/> */}
               </div>
             </Col>
