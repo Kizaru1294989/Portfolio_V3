@@ -42,11 +42,11 @@ function App() {
 
   return (
     <>
-    {/* <div>
+      {/* <div>
     <GlobeDemo/>
 
     </div> */}
- 
+
       <AnimatePresence mode="wait">
         {load ? (
           <motion.div
